@@ -1,0 +1,12 @@
+#trabajos-realizados {
+    background: #f9f9f9;
+    padding-bottom: 70px;
+}
+
+.img-portfolio {
+   margin-top: 15px
+}
+
+.img-portfolio:hover {
+    background-color: bisque;
+}
