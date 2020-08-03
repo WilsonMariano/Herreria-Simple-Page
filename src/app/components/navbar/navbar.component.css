@@ -4,6 +4,7 @@
 
 .active .nav-link {
     color: #dc3802 !important;
+    font-weight: bold;
 }
 
 .navbar-light .navbar-nav .nav-link {

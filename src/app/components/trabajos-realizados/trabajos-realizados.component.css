@@ -4,9 +4,15 @@
 }
 
 .img-portfolio {
-   margin-top: 15px
+   /* margin-top: 15px; */
+   height: 350px;
+   width: 100%;
 }
 
 .img-portfolio:hover {
     background-color: bisque;
+}
+
+.col-md-4 {
+    padding: 10px;
 }

@@ -26,7 +26,9 @@
 }
 
 .btn {
+    border: 0;
     background-color: #dc3802;
+    height: 50px;
 }
 
 .btn:hover {
@@ -43,4 +45,8 @@ ul {
 
 li {
     margin-bottom: 50px;
+}
+
+textarea {
+	resize: none;
 }
