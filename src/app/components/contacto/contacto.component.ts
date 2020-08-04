@@ -42,12 +42,17 @@ export class ContactoComponent implements OnInit {
       this._http.sendMessage(this.forma.value)
         .subscribe(
           data => {
-            setTimeout(() => this.loading = false, 500);
-            swal("¡Mensaje enviado!", "Gracias por dejarnos tu mensaje, a la brevedad te estaremos contactando", "success");
+            setTimeout(() => {
+              this.loading = false;
+              swal("¡Mensaje enviado!", "Gracias por dejarnos tu mensaje, a la brevedad te estaremos contactando", "success");
+              this.forma.reset();
+            }, 500);
           },
           err => {
-            setTimeout(() => this.loading = false, 500);
-            swal("¡Aviso importante!", "Ha ocurrido un error al enviar el mensaje, intente de nuevo más tarde.", "error");
+            setTimeout(() => {
+              this.loading = false, 500;
+              swal("¡Aviso importante!", "Ha ocurrido un error al enviar el mensaje, intente de nuevo más tarde.", "error");
+            });
           }
       );
     }
