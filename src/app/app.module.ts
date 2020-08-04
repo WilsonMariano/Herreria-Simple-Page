@@ -13,6 +13,7 @@ import { TrabajosRealizadosComponent } from './components/trabajos-realizados/tr
 import { ContactoComponent } from './components/contacto/contacto.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { GoogleMapsComponent } from './components/google-maps/google-maps.component';
+import { NgxSpinnerModule, NgxSpinnerService } from "ngx-spinner";
 
 @NgModule({
   declarations: [
@@ -29,9 +30,13 @@ import { GoogleMapsComponent } from './components/google-maps/google-maps.compon
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    NgxSpinnerModule
   ],
-  providers: [HttpService],
+  providers: [
+    HttpService,
+    NgxSpinnerService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

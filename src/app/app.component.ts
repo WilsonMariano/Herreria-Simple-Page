@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgxSpinnerService } from "ngx-spinner";
 declare var $;
 declare var SmoothScroll;
 declare var MenuSpy;
@@ -11,9 +12,20 @@ declare var MenuSpy;
 export class AppComponent implements OnInit {
   scroll;
 
+  public spinBdColor = "#ffffff";
+  public spinSize = "medium";
+  public spinColor = "#dc3802";
+  public spinType = "square-jelly-box";
+  public spinFullScreen = "fullScreen";
 
+  public whatsappPhone = "1123896955";
+  public whatsappMessage = "Hola!%20Quiero%20consultar%20por%20un%20producto.";
+
+  constructor(private spinner: NgxSpinnerService) {}
 
   ngOnInit() {
+    this.spinner.show();
+    setTimeout(() => this.spinner.hide(), 1000);
     this.initSmoothScroll();
     this.initNavActiveScroll();
   }
@@ -30,7 +42,7 @@ export class AppComponent implements OnInit {
     var elm = document.querySelector('#main-header');
     var ms = new MenuSpy(elm, {
       // amount of space between your menu and the next section to be activated.
-      threshold     : 40,
+      threshold: 40,
     });
   }
 }

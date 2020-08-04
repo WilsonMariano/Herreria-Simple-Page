@@ -2,24 +2,21 @@
     background: #ffffff !important;
 }
 
-.active .nav-link {
-    color: #dc3802 !important;
-    font-weight: bold;
-}
-
-.navbar-light .navbar-nav .nav-link {
+.navbar-nav.nav-link {
     color: #212529;
 }
 
-.navbar-light .navbar-nav .nav-link:hover {
+.navbar-nav.nav-link:hover {
     color: #dc3802;
 }
 
-a {
+.active .nav-link {
+    color: #dc3802 !important;
+    font-weight: bold;
     position: relative;
 }
 
-a:hover:before {
+li.nav-item.active :before {
     background: #dc3802;
     bottom: -6px;
     left: 10px;
