@@ -1,65 +1,63 @@
 <section id="contacto">
-<div class="container mb-6">
-    <div class="row mt-6">
-        <div class="col-md-12 text-center mb-5">
-            <h2 class="title">CONTÁCTENOS</h2>
-            <p class="mt-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor fugit nostrum veritatis deserunt sit, nemo libero, amet est inventore saepe eius assumenda adipisci, necessitatibus eos doloremque ullam minima optio sapiente.
-            </p>
-        </div>
-        <div class="col-md-6 text-center">
-            <div class="contact-block">
-                <h3 class="contact-title mb-5">Consultas</h3>
-                <form>
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Nombre">
-                    </div>
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Teléfono">
-                    </div>
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Email">
-                    </div>
-                    <div class="form-group">
-                        <textarea class="form-control" placeholder="Consulta"></textarea>
-                    </div>
-                    <button class="btn btn-rounded btn-block btn-primary">ENVIAR</button>
-                </form>
-
+    <div class="container mb-6">
+        <div class="row mt-6">
+            <div class="col-md-12 text-center mb-5">
+                <h2 class="title">CONTÁCTENOS</h2>
+                <p class="mt-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor fugit nostrum veritatis deserunt sit, nemo libero, amet est inventore saepe eius assumenda adipisci, necessitatibus eos doloremque ullam minima optio sapiente.
+                </p>
             </div>
-
-        </div>
-        <div class="col-md-6 text-center mt-5">
-            <div class="row">
-                <div class="col-md-4"><fa-icon [icon]="faMapMarkedAlt" size="4x"></fa-icon></div>
-                <div class="col-md-8 align-self-center"> 
-                    <b>Av. Espora 953, Adrogué</b>
+            <div class="col-md-6 text-center">
+                <div class="contact-block">
+                    <h3 class="contact-title mb-5">Consultas</h3>
+                    <form (ngSubmit)="sendMessage()" [formGroup]="forma">
+                        <div class="form-group text-left">
+                            <input type="text" class="form-control" placeholder="Nombre" formControlName="nombre">
+                            <span class="invalid" *ngIf="forma.get('nombre').errors?.required && forma.get('nombre').touched">*El
+                                campo es requerido</span>
+                        </div>
+                        <div class="form-group text-left">
+                            <input type="number" class="form-control" placeholder="Teléfono" formControlName="telefono">
+                            <span class="invalid" *ngIf="forma.get('telefono').errors?.required && forma.get('telefono').touched">*El
+                                campo es requerido</span>
+                        </div>
+                        <div class="form-group text-left">
+                            <input type="text" class="form-control" placeholder="Email" formControlName="email">
+                            <span class="invalid" *ngIf="forma.get('email').errors?.required && forma.get('email').touched">*El
+                                campo es requerido</span>
+                            <span class="invalid" *ngIf="forma.get('email').errors?.email && forma.get('email').touched">*El
+                                email es inválido</span>
+                        </div>
+                        <div class="form-group text-left">
+                            <textarea class="form-control" placeholder="Consulta" formControlName="consulta"></textarea>
+                            <span class="invalid" *ngIf="forma.get('consulta').errors?.required && forma.get('consulta').touched">*El
+                                campo es requerido</span>
+                        </div>
+                        <button [hidden]="loading" type="submit" class="btn btn-rounded btn-block btn-primary">ENVIAR</button>
+                        <fa-icon [hidden]="!loading" [icon]="faSpinner" [spin]="true" size="4x"></fa-icon>
+                    </form>
                 </div>
             </div>
-            <div class="row mt-6">
-                <div class="col-md-4"><fa-icon [icon]="faPhoneAlt" size="4x"></fa-icon></div>
-                <div class="col-md-8 align-self-center"> 
-                    <b>(011) 4293-2851</b>
-                    <b>(011) 4293-0716</b>
+            <div class="col-md-6 text-center mt-5">
+                <div class="row">
+                    <div class="col-md-4"><fa-icon [icon]="faMapMarkedAlt" size="4x"></fa-icon></div>
+                    <div class="col-md-8 align-self-center"> 
+                        <b>Av. Espora 953, Adrogué</b>
+                    </div>
+                </div>
+                <div class="row mt-6">
+                    <div class="col-md-4"><fa-icon [icon]="faPhoneAlt" size="4x"></fa-icon></div>
+                    <div class="col-md-8 align-self-center"> 
+                        <b>(011) 4293-2851</b>
+                        <b>(011) 4293-0716</b>
+                    </div>
+                </div>
+                <div class="row mt-6">
+                    <div class="col-md-4"><fa-icon [icon]="faEnvelope" size="4x"></fa-icon></div>
+                    <div class="col-md-8 align-self-center"> 
+                        <b>mgw009@gmail.com</b>
+                    </div>
                 </div>
             </div>
-            <div class="row mt-6">
-                <div class="col-md-4"><fa-icon [icon]="faEnvelope" size="4x"></fa-icon></div>
-                <div class="col-md-8 align-self-center"> 
-                    <b>mgw009@gmail.com</b>
-                </div>
-            </div>
-            <!-- <ul>
-                <li>
-                    <fa-icon [icon]="faMapMarkedAlt" size="4x"></fa-icon>
-                    <p>Av. Espora 953, Adrogué</p>
-                </li>
-                <li>
-                    <fa-icon [icon]="faPhoneAlt" size="4x"></fa-icon>
-                    <p>(011) 4293-2851</p>
-                    <p>(011) 4293-0716</p>
-                </li>
-            </ul> -->
         </div>
     </div>
-</div>
 </section>

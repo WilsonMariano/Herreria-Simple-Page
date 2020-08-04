@@ -1,6 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http'; 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
+import { HttpService } from '../app/services/http.service';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -22,9 +26,12 @@ import { GoogleMapsComponent } from './components/google-maps/google-maps.compon
   ],
   imports: [
     BrowserModule,
+    ReactiveFormsModule,
+    FormsModule,
+    HttpClientModule,
     FontAwesomeModule
   ],
-  providers: [],
+  providers: [HttpService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -4,15 +4,21 @@
 }
 
 .img-portfolio {
-   /* margin-top: 15px; */
    height: 350px;
    width: 100%;
 }
-
-.img-portfolio:hover {
-    background-color: bisque;
-}
-
-.col-md-4 {
+  
+[class^="col-md"]  {
     padding: 10px;
 }
+
+a.galery:hover {
+    background-color: #000;
+    opacity:0.7;
+    -moz-transition: all 0.5s linear;
+    -ms-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
+    -webkit-transition: all 0.5s linear;
+    transition: all 0.5s linear;
+}
+
