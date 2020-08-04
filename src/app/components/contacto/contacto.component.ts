@@ -19,10 +19,10 @@ export class ContactoComponent implements OnInit {
   
   // Formulario
   public forma = new FormGroup({
-    'nombre': new FormControl('Mariano', Validators.required),
-    'telefono': new FormControl('123456789', Validators.required),
-    'email': new FormControl('asda@sdsa', [Validators.required, Validators.email]),
-    'consulta': new FormControl('asdas', Validators.required)
+    'nombre': new FormControl('', Validators.required),
+    'telefono': new FormControl('', Validators.required),
+    'email': new FormControl('', [Validators.required, Validators.email]),
+    'consulta': new FormControl('', Validators.required)
   });
 
   public loading = false;
