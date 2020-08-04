@@ -39,7 +39,6 @@ export class ContactoComponent implements OnInit {
     if(this.forma.valid) {
       this.loading = true;
 
-      console.log(this.forma);
       this._http.sendMessage(this.forma.value)
         .subscribe(
           data => {
