@@ -23,7 +23,8 @@ fa-icon.contact-icon {
 }
 
 fa-icon.social-icon {
-    color: #6c757d;
+    /* color: #6c757d; */
+    color: #546E7A;
     cursor: pointer; 
 }
 

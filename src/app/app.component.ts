@@ -12,7 +12,7 @@ declare var MenuSpy;
 export class AppComponent implements OnInit {
   scroll;
 
-  public spinBdColor = "#ffffff";
+  public spinBdColor = "#546E7A";
   public spinSize = "medium";
   public spinColor = "#dc3802";
   public spinType = "square-jelly-box";
