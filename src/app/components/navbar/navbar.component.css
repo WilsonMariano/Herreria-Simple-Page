@@ -18,11 +18,17 @@
 
 li.nav-item.active :before {
     background: #dc3802;
-    bottom: -6px;
+    bottom: -2px;
     left: 10px;
     content: '';
     height: 2px;
     position: absolute;
     transition: 3s;
     width: 45px;
+}
+
+@media (max-width: 991px) { 
+    li.nav-item.active :before {
+        left: 0px;
+    }
 }

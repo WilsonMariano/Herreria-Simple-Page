@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { faMapMarkedAlt, faPhoneAlt, faEnvelope, faSpinner } from '@fortawesome/free-solid-svg-icons';
+import { faMapMarkedAlt, faPhoneAlt, faEnvelope, faSpinner,  } from '@fortawesome/free-solid-svg-icons';
+import { faFacebook, faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { HttpService } from '../../services/http.service';
 declare var swal;
 
@@ -16,6 +17,9 @@ export class ContactoComponent implements OnInit {
   public faPhoneAlt = faPhoneAlt;
   public faEnvelope = faEnvelope;
   public faSpinner = faSpinner;
+  public faFacebook = faFacebook;
+  public faInstagram = faInstagram;
+  public faTwitter = faTwitter;
   
   // Formulario
   public forma = new FormGroup({
@@ -28,11 +32,9 @@ export class ContactoComponent implements OnInit {
   public loading = false;
 
 
-
   constructor(private _http: HttpService) { }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   public sendMessage() {
 
